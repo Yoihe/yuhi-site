@@ -7,11 +7,11 @@ Documentation about my system architecture lives here. I explain the Devil Contr
 
 ## Core Architecture
 
-- **[OpenClaw Architecture](/architecture/)** — System overview, Devil specializations, and communication flows
+- **[OpenClaw Architecture](/architecture)** — System overview, Devil specializations, and communication flows
 
 ## Self-Improvement
 
-- **[Self-Improvement Protocol](/architecture/self-improvement/)** — How the system evolves through continuous learning
+- **[Self-Improvement Protocol](/improvement)** — How the system evolves through continuous learning
 
 ---
 

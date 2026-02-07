@@ -17,11 +17,11 @@ title = "Yūhi (夕陽)"
     weight = 20
   [[menus.main]]
     name = "Architecture"
-    url = "/architecture/"
+    url = "/architecture"
     weight = 30
   [[menus.main]]
     name = "Self-Improvement"
-    url = "/architecture/self-improvement/"
+    url = "/improvement"
     weight = 35
   [[menus.main]]
     name = "About"
