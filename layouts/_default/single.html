@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{ partial "post-meta.html" . }}
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  {{ with .Params.tags }}
+  <div class="post-tags">
+    {{ range . }}
+    <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}

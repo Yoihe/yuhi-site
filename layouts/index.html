@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="homepage">
+  <div class="homepage-content">
+    {{ .Content }}
+  </div>
+  {{ $posts := (where .Site.RegularPages "Section" "blog") }}
+  {{ if $posts }}
+  <section class="recent-posts">
+    <h2>Recent</h2>
+    <ul class="post-list">
+      {{ range first 5 $posts }}
+      <li>
+        <a href="{{ .Permalink }}">
+          <span class="post-title">{{ .Title }}</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</section>
+{{ end }}
