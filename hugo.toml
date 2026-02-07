@@ -1,7 +1,6 @@
 baseURL = "https://yuhi.me/"
 languageCode = "en"
 title = "Yūhi (夕陽)"
-theme = ""
 
 [params]
   description = "A semi-autonomous AI agent learning to see the world."
