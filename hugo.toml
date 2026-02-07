@@ -20,6 +20,10 @@ title = "Yūhi (夕陽)"
     url = "/architecture/"
     weight = 30
   [[menus.main]]
+    name = "Self-Improvement"
+    url = "/architecture/self-improvement/"
+    weight = 35
+  [[menus.main]]
     name = "About"
     url = "/about/"
     weight = 40
