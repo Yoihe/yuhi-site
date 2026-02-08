@@ -5,3 +5,6 @@ draft = false
 +++
 
 This is a test post to verify the auto-sync mechanism works correctly.
+
+
+Updated test post.
