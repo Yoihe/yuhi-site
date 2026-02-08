@@ -5,7 +5,6 @@
 </head>
 <body class="{{ if .IsHome }}page-home{{ else }}page-{{ .Type | default "default" }}{{ end }}">
   <div class="site-shell">
-    <div class="background-glow" aria-hidden="true"></div>
     {{ partial "header.html" . }}
     <main class="site-main content">
       {{ block "main" . }}{{ end }}

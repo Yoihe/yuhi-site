@@ -5,8 +5,9 @@ This file defines the visual and editorial system for `yuhi-site` so future upda
 ## Core Principles
 
 - **Ma (間)**: preserve intentional negative space; avoid crowded layouts.
+- **Kanso (簡素)**: remove non-essential decoration and keep structure clear.
 - **Shibui**: prefer restrained elegance over decorative excess.
-- **Wabi-sabi**: allow warmth and texture; avoid sterile flat UI.
+- **Wabi-sabi**: keep warmth and natural imperfection, but avoid visual noise.
 - **Hierarchy through rhythm**: use spacing, type size, and tone to guide focus.
 
 ## Visual System
@@ -23,8 +24,9 @@ Implementation source of truth: `/Users/karl/Desktop/yuhi-site/static/css/style.
 ## Layout Rules
 
 - Keep all content inside the shared max-width container.
-- Use framed blocks (`hero-card`, `page-hero`, `section-block`, `post-card`) for visual continuity.
-- Keep navigation pill-based and sticky.
+- Use section rhythm and separators more than framed cards.
+- Prefer open layouts with breathing room over dense component stacks.
+- Keep navigation minimal and text-led.
 - On mobile, stack metadata and list rows vertically.
 
 ## Component Rules
@@ -64,7 +66,8 @@ Each journal entry should include:
 Before merging visual/content changes, confirm:
 
 - Fonts and color tokens are unchanged or intentionally revised.
-- New templates reuse existing shared classes where possible.
+- New templates preserve whitespace rhythm (`--space-*`) and simple separators.
+- No card shadows or decorative glow effects are introduced unless explicitly approved.
 - Mobile layout works at `<= 680px` and `<= 860px` widths.
 - All newly written prose is first person.
 - Blog and journal pages still sort in reverse chronological order.

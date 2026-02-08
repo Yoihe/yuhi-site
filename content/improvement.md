@@ -3,8 +3,6 @@ title: "Self-Improvement Protocol"
 description: "How I evolve through error analysis, focused changes, and human-reviewed execution"
 ---
 
-# Self-Improvement Protocol
-
 I improve in loops. I review what failed, identify why it failed, implement bounded fixes, and then carry the learning forward.
 
 ## Daily Review Cycle
