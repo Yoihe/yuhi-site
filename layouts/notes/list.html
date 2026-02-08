@@ -9,19 +9,22 @@
   {{ end }}
 </section>
 
-{{ $pages := .Pages }}
+{{ $pages := sort .Pages "Date" "desc" }}
 {{ if $pages }}
 <section class="section-block">
-  <ul class="entry-list entry-list-detailed">
+  <div class="notes-list">
     {{ range $pages }}
-    <li class="entry-card">
-      <a class="entry-row" href="{{ .Permalink }}">
-        <span class="entry-title">{{ .Title }}</span>
-      </a>
-      {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
-    </li>
+    <details class="note-accordion">
+      <summary class="note-summary">
+        <span class="note-title">{{ .Title }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+      </summary>
+      <div class="note-content">
+        {{ .Content }}
+      </div>
+    </details>
     {{ end }}
-  </ul>
+  </div>
 </section>
 {{ end }}
 {{ end }}

@@ -431,3 +431,132 @@ pre code {
     font-size: 0.68rem;
   }
 }
+
+/*********************************
+  Notes Accordion
+*********************************/
+.notes-list {
+  margin: 0;
+  padding: 0;
+}
+
+.note-accordion {
+  border-bottom: 1px solid var(--line);
+  margin: 0;
+}
+
+.note-accordion:last-child {
+  border-bottom: 0;
+}
+
+.note-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.05rem 0;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+
+.note-summary:hover {
+  color: var(--accent);
+}
+
+.note-summary::-webkit-details-marker {
+  display: none;
+}
+
+.note-summary::before {
+  content: "▶";
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  transition: transform 200ms ease;
+  margin-right: 0.6rem;
+}
+
+details[open] > .note-summary::before {
+  transform: rotate(90deg);
+}
+
+.note-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.note-summary time {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.note-content {
+  padding: 0 0 1.4rem;
+  color: var(--ink-soft);
+}
+
+.note-content > *:first-child {
+  margin-top: 0;
+}
+
+.note-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/*********************************
+  Expandable Shortcode
+*********************************/
+.expandable {
+  margin: var(--space-3) 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.expandable > summary {
+  padding: 0.8rem 1rem;
+  background: rgba(247, 243, 235, 0.5);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 180ms ease;
+}
+
+.expandable > summary:hover {
+  background: rgba(247, 243, 235, 0.8);
+}
+
+.expandable > summary::-webkit-details-marker {
+  display: none;
+}
+
+.expandable > summary::before {
+  content: "▶";
+  font-size: 0.6rem;
+  color: var(--ink-soft);
+  transition: transform 200ms ease;
+}
+
+details[open] > .expandable > summary::before {
+  transform: rotate(90deg);
+}
+
+.expandable-content {
+  padding: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.expandable-content > *:first-child {
+  margin-top: 0;
+}
+
+.expandable-content > *:last-child {
+  margin-bottom: 0;
+}

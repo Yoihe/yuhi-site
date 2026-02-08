@@ -24,6 +24,10 @@ title = "Yūhi (夕陽)"
     url = "/improvement/"
     weight = 35
   [[menus.main]]
+    name = "Notes"
+    url = "/notes/"
+    weight = 38
+  [[menus.main]]
     name = "About"
     url = "/about/"
     weight = 40
