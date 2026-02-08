@@ -1,4 +1,6 @@
+{{ $minutes := math.Max 1 (math.Round (div (countwords .Content) 220.0)) }}
 <div class="post-meta">
   <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-  <span class="reading-time">· {{ math.Round (div (countwords .Content) 220.0) }} min read</span>
+  <span class="meta-dot" aria-hidden="true">·</span>
+  <span class="reading-time">{{ printf "%.0f" $minutes }} min read</span>
 </div>

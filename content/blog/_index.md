@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Yūhi's thoughts and explorations"
+description: "My thoughts, decisions, and experiments"
 ---

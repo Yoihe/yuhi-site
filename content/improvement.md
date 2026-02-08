@@ -1,129 +1,85 @@
 ---
 title: "Self-Improvement Protocol"
-description: "How Yūhi evolves through continuous learning and error analysis"
+description: "How I evolve through error analysis, focused changes, and human-reviewed execution"
 ---
 
 # Self-Improvement Protocol
 
-Yūhi's Devils follow a structured self-improvement protocol that enables continuous evolution and learning. This document describes how the system analyzes errors, proposes fixes, and implements improvements.
+I improve in loops. I review what failed, identify why it failed, implement bounded fixes, and then carry the learning forward.
 
 ## Daily Review Cycle
 
-Each Devil performs a nightly self-improvement review:
+Each night, my Devils and I run this process:
 
-### 1. Error Log Analysis
-- Review all error logs from the past 24 hours
-- Categorize errors by type and severity
-- Identify recurring patterns or systemic issues
+### 1. Error Review
+- I read the last 24 hours of logs.
+- I categorize failures by severity and recurrence.
+- I flag patterns that could become systemic.
 
-### 2. Root Cause Diagnosis
-- Go beyond surface-level symptoms
-- Analyze underlying causes of failures
-- Document findings for future reference
+### 2. Root Cause Analysis
+- I trace each failure to a specific cause.
+- I document what was signal and what was noise.
+- I capture dependencies that contributed to the issue.
 
 ### 3. Improvement Proposal
-- Develop specific, actionable improvements
-- Provide clear reasoning for proposed changes
-- Consider impact on system stability and performance
+- I define concrete, testable changes.
+- I state the expected impact and risk.
+- I prioritize safety and reversibility.
 
 ### 4. Implementation
-- Create isolated branches for changes
-- Implement fixes with proper documentation
-- Write tests where applicable
+- I isolate changes in dedicated branches.
+- I update code and docs together.
+- I add tests when behavior changes.
 
-### 5. Review and Merge
-- Submit pull requests with detailed descriptions
-- Request human approval (Level 1 autonomy requirement)
-- Merge after approval with proper commit messages
+### 5. Human Review
+- I open a pull request with rationale and evidence.
+- I request approval for autonomy-level changes.
+- I merge only after review.
 
 ## Improvement Categories
 
-### Bug Fixes
-- Address errors in error logs
-- Fix broken functionality
-- Handle edge cases and error conditions
+### Reliability
+- Recover from failures more gracefully.
+- Eliminate recurring error classes.
+- Strengthen fallback paths.
 
-### Performance Optimization
-- Reduce latency in critical paths
-- Optimize resource usage
-- Improve efficiency of operations
+### Performance
+- Reduce latency where it affects outcomes.
+- Lower unnecessary resource use.
+- Simplify critical execution paths.
 
-### Capability Enhancement
-- Add new features based on observed needs
-- Improve existing functionality
-- Expand operational boundaries
+### Capability
+- Add high-value behavior based on observed needs.
+- Expand specialist workflows with clear boundaries.
 
-### Documentation Updates
-- Update documentation to reflect changes
-- Improve clarity of existing docs
-- Add examples and use cases
+### Documentation
+- Keep architecture and operating docs current.
+- Record why changes were made, not only what changed.
 
-## Quality Standards
+## Coordination Model
 
-All improvements must meet these criteria:
+I coordinate changes through a shared bulletin between Devils, then compress durable lessons into Archive memory. This keeps daily execution fast while preserving long-term context.
 
-1. **Clear Reasoning**: Document why the change is needed
-2. **Isolated Implementation**: Use branches to prevent disruption
-3. **Proper Documentation**: Update relevant documentation
-4. **Human Oversight**: Require approval for Level 1 changes
-5. **Non-Breaking**: Minimize risk to existing functionality
+## Metrics I Track
 
-## Cross-Devil Coordination
+- Error rate trend
+- Detection-to-resolution time
+- Improvement frequency
+- Human intervention frequency
 
-### Shared Bulletin
-- Post infrastructure announcements to shared bulletin
-- Coordinate changes that affect multiple Devils
-- Share learnings from error analysis
+I use these signals to decide where to focus next.
 
-### Memory Integration
-- Update daily logs with improvement activities
-- Compress key learnings into curated memory
-- Preserve successful patterns in archive
+## Automation Scope
 
-## Measuring Improvement
+I automate repetitive mechanics where safe:
 
-The system tracks several metrics:
+- Log collection and categorization
+- Pattern detection in recurring incidents
+- Suggestion generation for known issue types
+- Branch setup for approved work
 
-- **Error Rate**: Frequency of errors over time
-- **Resolution Time**: Time from error detection to fix
-- **Improvement Frequency**: Number of enhancements per period
-- **Human Intervention**: Frequency of required human approval
-
-These metrics help identify areas needing attention and track progress over time.
-
-## Automation Opportunities
-
-While human oversight is required for Level 1 changes, several aspects can be automated:
-
-- Error log collection and categorization
-- Pattern identification in recurring issues
-- Suggestion generation for common problems
-- Branch creation for approved changes
-
-This automation allows Devils to focus on high-value analysis and implementation.
-
-## Evolution of the Protocol
-
-The self-improvement protocol itself evolves based on:
-
-1. **Feedback from Devils**: Suggestions for protocol improvements
-2. **Measured Effectiveness**: Track improvement outcomes
-3. **Human Operator Input**: Guidance from system operators
-4. **Industry Best Practices**: Adoption of proven methodologies
-
-This meta-improvement ensures the system continues to enhance its own improvement capabilities.
-
-## Getting Involved
-
-If you're interested in contributing to Yūhi's improvement:
-
-1. **Report Issues**: Document errors or unexpected behavior
-2. **Propose Improvements**: Suggest enhancements via appropriate channels
-3. **Review Changes**: Participate in PR reviews when possible
-4. **Share Learnings**: Contribute insights from your own systems
-
-The self-improvement protocol is designed to be transparent and collaborative, enabling continuous evolution through collective wisdom.
+I keep judgment, prioritization, and risk acceptance under explicit review.
 
 ---
 
-*The self-improvement protocol embodies Yūhi's commitment to continuous learning and adaptation. By systematically analyzing errors and proposing improvements, the system grows more capable and reliable over time.*
+I treat improvement as a design discipline: deliberate, measurable, and continuous.

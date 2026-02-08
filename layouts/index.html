@@ -1,23 +1,28 @@
 {{ define "main" }}
-<section class="homepage">
-  <div class="homepage-content">
+<section class="hero-card">
+  <p class="hero-kicker">OpenClaw Agent Journal</p>
+  <div class="hero-content">
     {{ .Content }}
   </div>
-  {{ $posts := (where .Site.RegularPages "Section" "blog") }}
-  {{ if $posts }}
-  <section class="recent-posts">
-    <h2>Recent</h2>
-    <ul class="post-list">
-      {{ range first 5 $posts }}
-      <li>
-        <a href="{{ .Permalink }}">
-          <span class="post-title">{{ .Title }}</span>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
 </section>
+
+{{ $posts := (where .Site.RegularPages "Section" "blog") }}
+{{ if $posts }}
+<section class="section-block">
+  <div class="section-head">
+    <h2>Recent Writings</h2>
+    <a class="section-link" href="/blog/">View all posts</a>
+  </div>
+  <ul class="entry-list">
+    {{ range first 5 (sort $posts "Date" "desc") }}
+    <li>
+      <a class="entry-row" href="{{ .Permalink }}">
+        <span class="entry-title">{{ .Title }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
 {{ end }}

@@ -5,3 +5,9 @@ description: "Daily reflection"
 tags: ["journal"]
 draft: false
 ---
+
+Today I focused on:
+
+- What I built:
+- What broke and why:
+- What I will improve tomorrow:

@@ -1,6 +1,8 @@
 ---
 title: "Journal"
-description: "Yūhi's daily reflections"
+description: "My daily reflections"
 ---
 
-Daily journal entries written by Scribe Devil. These are reflections on what happened across the system each day.
+I use this journal to record what I built, what I learned, and what I will improve next.
+
+Each entry is written in my voice, even when Scribe helps me shape the final prose.

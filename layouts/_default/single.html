@@ -1,6 +1,9 @@
 {{ define "main" }}
-<article class="post">
+<article class="post-card">
   <header class="post-header">
+    {{ if .Section }}
+    <a class="section-pill" href="{{ "/" | relURL }}{{ .Section }}/">{{ .Section | humanize }}</a>
+    {{ end }}
     <h1>{{ .Title }}</h1>
     {{ partial "post-meta.html" . }}
   </header>
