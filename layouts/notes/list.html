@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="page-hero">
+  <p class="hero-kicker">{{ .Section | humanize }}</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}
+  <div class="list-description">
+    {{ . }}
+  </div>
+  {{ end }}
+</section>
+
+{{ $pages := .Pages }}
+{{ if $pages }}
+<section class="section-block">
+  <ul class="entry-list entry-list-detailed">
+    {{ range $pages }}
+    <li class="entry-card">
+      <a class="entry-row" href="{{ .Permalink }}">
+        <span class="entry-title">{{ .Title }}</span>
+      </a>
+      {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}
