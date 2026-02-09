@@ -68,14 +68,8 @@ body {
   font-size: 1.32rem;
   line-height: 1.42;
   letter-spacing: 0.01em;
-  background: linear-gradient(
-    180deg,
-    #95d6ff 0%,
-    #bcecff 22%,
-    #b5e7ff 22% 33%,
-    #8fd67c 33%,
-    #7dcb6c 100%
-  );
+  background:
+    linear-gradient(180deg, #91cfff 0%, #7ab4e3 42%, #6a9ec8 100%);
   overflow-x: hidden;
   position: relative;
 }
@@ -107,31 +101,31 @@ body::after {
   z-index: -1;
 }
 
-/* Route-like ground tiles + path blocks */
+/* 8-bit pixel texture layer */
 body::before {
   background:
-    radial-gradient(ellipse at 18% 70%, rgba(132, 214, 248, 0.8) 0 58px, rgba(90, 167, 210, 0.78) 59px 64px, transparent 65px),
-    radial-gradient(ellipse at 84% 72%, rgba(132, 214, 248, 0.78) 0 64px, rgba(90, 167, 210, 0.76) 65px 70px, transparent 71px),
-    linear-gradient(90deg, transparent 0 14%, rgba(230, 213, 138, 0.86) 14% 24%, rgba(199, 176, 102, 0.84) 24% 26%, transparent 26% 100%),
-    linear-gradient(0deg, transparent 0 56%, rgba(230, 213, 138, 0.84) 56% 64%, rgba(199, 176, 102, 0.82) 64% 66%, transparent 66% 100%),
-    linear-gradient(90deg, transparent 0 72%, rgba(230, 213, 138, 0.8) 72% 80%, rgba(199, 176, 102, 0.78) 80% 82%, transparent 82% 100%),
-    repeating-linear-gradient(0deg, rgba(104, 189, 96, 0.22) 0 1px, transparent 1px 12px),
-    repeating-linear-gradient(90deg, rgba(98, 180, 92, 0.2) 0 1px, transparent 1px 12px),
-    repeating-radial-gradient(circle at 0 0, rgba(123, 204, 114, 0.2) 0 1px, transparent 1px 14px);
-  opacity: 0.68;
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(45deg, rgba(33, 71, 114, 0.16) 0 2px, transparent 2px 16px),
+    linear-gradient(180deg, rgba(197, 233, 255, 0.22), rgba(109, 163, 205, 0.12));
+  opacity: 0.5;
   image-rendering: pixelated;
 }
 
-/* Sky clouds + mountain silhouettes */
+/* subtle 8-bit checker accents */
 body::after {
   background:
-    radial-gradient(circle at 12% 11%, rgba(241, 251, 255, 0.88) 0 58px, transparent 59px),
-    radial-gradient(circle at 20% 10%, rgba(241, 251, 255, 0.82) 0 44px, transparent 45px),
-    radial-gradient(circle at 73% 10%, rgba(241, 251, 255, 0.88) 0 56px, transparent 57px),
-    radial-gradient(circle at 82% 12%, rgba(241, 251, 255, 0.82) 0 42px, transparent 43px),
-    linear-gradient(168deg, transparent 0 50%, rgba(108, 170, 103, 0.34) 50% 57%, transparent 57% 100%),
-    linear-gradient(194deg, transparent 0 54%, rgba(84, 144, 90, 0.38) 54% 62%, transparent 62% 100%);
-  opacity: 0.42;
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 0 24px,
+      rgba(92, 146, 193, 0.08) 24px 48px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0 24px,
+      rgba(74, 127, 176, 0.06) 24px 48px
+    );
+  opacity: 0.3;
 }
 
 .site-shell {
@@ -161,8 +155,7 @@ body::after {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% -8%, rgba(255, 255, 255, 0.12) 0 360px, transparent 361px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 140px);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 220px);
 }
 
 .site-main::after {
