@@ -1,5 +1,5 @@
 /* ========================================
-   Yūhi (夕陽) — Quiet Design System
+   Yūhi (夕陽) — Dark Atmosphere Design System
    ======================================== */
 
 *, *::before, *::after {
@@ -7,16 +7,38 @@
 }
 
 :root {
-  --paper: #f7f3eb;
-  --paper-deep: #f1ebdf;
-  --ink: #1f1b18;
-  --ink-soft: #514940;
-  --accent: #a6462d;
-  --accent-deep: #863623;
-  --indigo: #2d364d;
-  --line: rgba(73, 58, 46, 0.2);
+  /* Dark Atmosphere Background */
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a202c;
+  --bg-radial: radial-gradient(circle at 50% 0%, #0f1419 0%, #1a202c 100%);
+
+  /* Type-based Palette */
+  --fire: #ff6b35;
+  --fire-glow: rgba(255, 107, 53, 0.4);
+  --water: #2e86de;
+  --water-glow: rgba(46, 134, 222, 0.4);
+  --electric: #feca57;
+  --electric-glow: rgba(254, 202, 87, 0.4);
+
+  /* Typography */
+  --ink: #e8e6e3;
+  --ink-soft: #a0a5ab;
+  --ink-dim: #6b7280;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(15, 20, 25, 0.75);
+  --glass-blur: blur(12px);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Accents */
+  --accent: var(--fire);
+  --accent-deep: #cc4a1d;
+  --indigo: #4a5568;
+
+  /* Layout */
   --container: 760px;
   --radius-sm: 8px;
+  --radius-pill: 9999px;
   --space-1: 0.75rem;
   --space-2: 1.2rem;
   --space-3: 1.8rem;
@@ -37,13 +59,30 @@ body {
   font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
   color: var(--ink);
   line-height: 1.9;
-  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  background: var(--bg-radial);
 }
 
 .site-shell {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Ember Particle Canvas */
+#ember-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .content {
@@ -66,11 +105,12 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.14em;
-  transition: color 180ms ease;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
 }
 
 a:hover {
-  color: var(--accent-deep);
+  color: var(--fire);
+  text-decoration-color: var(--fire-glow);
 }
 
 h1, h2, h3, h4 {
@@ -109,33 +149,34 @@ li {
 blockquote {
   margin: var(--space-4) 0;
   padding: 0.1rem 0 0.1rem 1.2rem;
-  border-left: 2px solid rgba(166, 70, 45, 0.55);
-  color: #5d5249;
+  border-left: 2px solid rgba(255, 107, 53, 0.55);
+  color: var(--ink-soft);
   font-style: italic;
 }
 
 hr {
   border: 0;
   height: 1px;
-  background: var(--line);
+  background: rgba(255, 255, 255, 0.1);
   margin: var(--space-5) 0;
 }
 
 code {
   font-family: "JetBrains Mono", "SFMono-Regular", monospace;
   font-size: 0.85em;
-  background: rgba(31, 27, 24, 0.06);
-  border: 1px solid rgba(31, 27, 24, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
   padding: 0.12rem 0.36rem;
+  color: var(--electric);
 }
 
 pre {
   margin: var(--space-4) 0;
   padding: 1rem 1.1rem;
   border-radius: var(--radius-sm);
-  background: #efe9de;
-  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow-x: auto;
 }
 
@@ -143,6 +184,7 @@ pre code {
   border: 0;
   background: transparent;
   padding: 0;
+  color: var(--ink);
 }
 
 /*********************************
@@ -166,7 +208,7 @@ pre code {
 .section-block {
   margin-top: var(--space-5);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-kicker {
@@ -175,7 +217,7 @@ pre code {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.72rem;
-  color: var(--indigo);
+  color: var(--electric);
 }
 
 .hero-content p:last-child,
@@ -203,11 +245,16 @@ pre code {
 }
 
 /*********************************
-  Header + Navigation
+  Glassmorphism Header
 *********************************/
 .site-header {
-  border-bottom: 1px solid var(--line);
-  background: rgba(247, 243, 235, 0.96);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .site-nav {
@@ -226,12 +273,21 @@ pre code {
   align-items: baseline;
   gap: 0.55rem;
   text-decoration: none;
+  transition: opacity 180ms ease;
+}
+
+.site-title:hover {
+  opacity: 0.8;
 }
 
 .site-title-kanji {
   font-family: "Zen Old Mincho", serif;
   font-size: 1.52rem;
   line-height: 1;
+  background: linear-gradient(135deg, var(--fire) 0%, var(--electric) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .site-title-roman {
@@ -261,12 +317,77 @@ pre code {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 0.22rem;
+  transition: color 180ms ease, border-color 180ms ease;
 }
 
 .nav-links a.active,
 .nav-links a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
+  color: var(--electric);
+  border-bottom-color: var(--electric);
+}
+
+/*********************************
+  System Active Badge
+*********************************/
+.system-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--water);
+  border: 1px solid var(--water);
+  border-radius: var(--radius-pill);
+  background: rgba(46, 134, 222, 0.08);
+}
+
+.system-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--water);
+  border-radius: 50%;
+  animation: pulse-water 2s ease-in-out infinite;
+}
+
+.system-badge.fire {
+  color: var(--fire);
+  border-color: var(--fire);
+  background: rgba(255, 107, 53, 0.08);
+}
+
+.system-badge.fire::before {
+  background: var(--fire);
+  animation: pulse-fire 2s ease-in-out infinite;
+}
+
+.system-badge.electric {
+  color: var(--electric);
+  border-color: var(--electric);
+  background: rgba(254, 202, 87, 0.08);
+}
+
+.system-badge.electric::before {
+  background: var(--electric);
+  animation: pulse-electric 2s ease-in-out infinite;
+}
+
+@keyframes pulse-fire {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--fire-glow); }
+  50% { opacity: 0.6; box-shadow: 0 0 12px var(--fire-glow); }
+}
+
+@keyframes pulse-water {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--water-glow); }
+  50% { opacity: 0.6; box-shadow: 0 0 12px var(--water-glow); }
+}
+
+@keyframes pulse-electric {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--electric-glow); }
+  50% { opacity: 0.6; box-shadow: 0 0 12px var(--electric-glow); }
 }
 
 /*********************************
@@ -280,7 +401,7 @@ pre code {
 
 .entry-card {
   margin: 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.05rem 0;
 }
 
@@ -295,6 +416,11 @@ pre code {
   gap: 1rem;
   color: var(--ink);
   text-decoration: none;
+  transition: opacity 180ms ease;
+}
+
+.entry-row:hover {
+  opacity: 0.8;
 }
 
 .entry-title {
@@ -320,7 +446,7 @@ pre code {
 .post-header {
   margin-bottom: var(--space-4);
   padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section-pill {
@@ -330,10 +456,11 @@ pre code {
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--indigo);
-  border: 1px solid rgba(45, 54, 77, 0.28);
+  color: var(--electric);
+  border: 1px solid rgba(254, 202, 87, 0.3);
   border-radius: 999px;
   text-decoration: none;
+  background: rgba(254, 202, 87, 0.05);
 }
 
 .post-meta {
@@ -358,16 +485,18 @@ pre code {
 
 .tag {
   display: inline-block;
-  border: 1px solid rgba(166, 70, 45, 0.26);
-  color: var(--accent);
+  border: 1px solid rgba(255, 107, 53, 0.26);
+  color: var(--fire);
   border-radius: 999px;
   font-size: 0.77rem;
   padding: 0.16rem 0.5rem;
   text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease;
 }
 
 .tag:hover {
-  border-color: rgba(134, 54, 35, 0.5);
+  border-color: rgba(255, 107, 53, 0.5);
+  background: rgba(255, 107, 53, 0.1);
 }
 
 /*********************************
@@ -376,9 +505,9 @@ pre code {
 .site-footer {
   width: min(var(--container), calc(100% - 3rem));
   margin: 0 auto;
-  padding: 0 0 var(--space-5);
+  padding: var(--space-5) 0;
   text-align: center;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-footer p {
