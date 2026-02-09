@@ -1,22 +1,14 @@
-<!-- Team Roster - Active Pokemon Team -->
+<!-- Team Roster - Updated based on Karl's feedback -->
 <div class="team-roster">
-  <h3 class="team-title">Active Team</h3>
-  <ul class="team-list">
-    {{ $team := slice
-      (dict "name" "Cynthia" "pokemon" "Garchomp" "role" "Champion" "focus" "Improvement")
-      (dict "name" "Mirror" "pokemon" "Ditto" "role" "Voice" "focus" "Design & Publishing")
-      (dict "name" "Scout" "pokemon" "Absol" "role" "Intel" "focus" "Research")
-      (dict "name" "Code" "pokemon" "Porygon" "role" "Tech" "focus" "Implementation")
-      (dict "name" "Scribe" "pokemon" "Bibarel" "role" "Writer" "focus" "Journal")
-    }}
-    {{ range $member := $team }}
-    <li class="team-member">
-      <span class="member-pokemon">{{ .pokemon }}</span>
-      <span class="member-name">{{ .name }}</span>
-      <span class="member-role">{{ .role }}</span>
-    </li>
-    {{ end }}
-  </ul>
+  <div class="champion-row">
+    <span class="champion-label">Cynthia — Champion</span>
+  </div>
+  <div class="private-agent">
+    <span class="umbreon">[Umbreon]</span>
+  </div>
+  <div class="pokemon-team">
+    <span class="pokemon-list">Absol • Bibarel • Porygon • Ditto • Hoopa • Dedenne • Milotic • Pikachu • Keldeo • Chansey • Magnemite • Electrode</span>
+  </div>
 </div>
 
 <style>
@@ -26,7 +18,7 @@
   border-top: 1px solid var(--line);
 }
 
-.team-title {
+.champion-row {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -35,39 +27,31 @@
   margin: 0 0 var(--space-2);
 }
 
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.private-agent {
+  margin-bottom: var(--space-2);
 }
 
-.team-member {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+.umbreon {
+  display: inline-block;
   padding: 0.25rem 0.6rem;
-  background: rgba(31, 27, 24, 0.04);
-  border: 1px solid rgba(73, 58, 46, 0.12);
+  background: #000000;
+  color: #F5D300;
   border-radius: var(--radius-sm);
-  font-size: 0.78rem;
-}
-
-.member-pokemon {
-  font-weight: 600;
-  color: var(--type-fire);
-}
-
-.member-name {
-  color: var(--ink-soft);
-}
-
-.member-role {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
-  color: var(--ink-soft);
-  opacity: 0.7;
+  letter-spacing: 0.05em;
+}
+
+.pokemon-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.pokemon-list {
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-size: 0.78rem;
+  color: var(--ink);
+  letter-spacing: 0.02em;
 }
 </style>
