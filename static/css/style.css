@@ -679,3 +679,81 @@ details[open] > .expandable > summary::before {
 .expandable-content > *:last-child {
   margin-bottom: 0;
 }
+
+/*********************************
+  Team Page
+*********************************/
+.team-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.team-member-card {
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 220ms ease;
+}
+
+.team-member-card:hover {
+  border-color: rgba(184, 90, 69, 0.35);
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 27, 24, 0.06);
+}
+
+.member-avatar {
+  font-size: 2rem;
+  margin-bottom: var(--space-1);
+  text-align: center;
+}
+
+.member-pokemon {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--type-fire);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.member-name {
+  font-size: 1rem;
+  color: var(--ink);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+
+.member-role {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--type-water);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+
+.member-focus {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-bottom: var(--space-2);
+}
+
+.member-desc {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.member-desc em {
+  font-style: normal;
+  color: var(--type-water);
+}
