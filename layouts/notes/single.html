@@ -5,7 +5,6 @@
     <a class="section-pill" href="{{ "/" | relURL }}{{ .Section }}/">{{ .Section | humanize }}</a>
     {{ end }}
     <h1>{{ .Title }}</h1>
-    {{ partial "post-meta.html" . }}
   </header>
   <div class="post-content">
     {{ .Content }}
