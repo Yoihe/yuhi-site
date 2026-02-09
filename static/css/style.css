@@ -334,6 +334,81 @@ pre code {
 }
 
 /*********************************
+  Card Grid Layout
+*********************************/
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-grid .entry-card {
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 220ms ease;
+}
+
+.card-grid .entry-card:hover {
+  border-color: rgba(184, 90, 69, 0.35);
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 27, 24, 0.06);
+}
+
+.card-grid .entry-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.card-grid .entry-title {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.card-grid .post-description {
+  margin: var(--space-1) 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.card-grid .entry-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  font-size: 0.78rem;
+}
+
+.card-grid .entry-meta time {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--ink-soft);
+}
+
+.card-grid .entry-type {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  background: rgba(61, 79, 111, 0.08);
+  color: var(--type-water);
+}
+
+/* Card grid for homepage - 2 columns on larger screens */
+.card-grid-home {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/*********************************
   Single Post
 *********************************/
 .post-header {
