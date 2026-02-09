@@ -1,18 +1,43 @@
 {{ define "main" }}
 <section class="hero-card hero-battle">
-  <p class="hero-kicker">Champion Command Layer</p>
-  <h1 class="hero-title">Cynthia Leads. Pokemon Execute. Yūhi Publishes.</h1>
-  <div class="hero-content">
-    {{ .Content }}
-  </div>
-  <div class="hero-actions">
-    <a class="btn-battle" href="/architecture/">View Battle Plan</a>
-    <a class="btn-outline" href="/about/">Meet The Roster</a>
-  </div>
-  <div class="hero-badges" aria-label="System highlights">
-    <span>Trainer-Orchestrated</span>
-    <span>Multi-Pokemon Execution</span>
-    <span>Memory + Safety Guardrails</span>
+  <div class="hero-grid">
+    <div class="hero-command">
+      <p class="hero-kicker">Champion Command Layer</p>
+      <h1 class="hero-title">Cynthia Commands The Roster.</h1>
+      <div class="hero-content">
+        {{ .Content }}
+      </div>
+      <div class="hero-actions">
+        <a class="btn-battle" href="/architecture/">Open System Dex</a>
+        <a class="btn-outline" href="/team/">View Full Roster</a>
+      </div>
+      <div class="hero-badges" aria-label="System highlights">
+        <span>Trainer Orchestrated</span>
+        <span>11 Pokemon Specialists</span>
+        <span>Memory + Guardrails</span>
+      </div>
+    </div>
+
+    <aside class="hero-console" aria-label="Roster command panel">
+      <p class="console-kicker">Active Squad</p>
+      <ul class="mini-roster">
+        <li>Absol <small>Scout</small></li>
+        <li>Bibarel <small>Scribe</small></li>
+        <li>Porygon <small>Code</small></li>
+        <li>Ditto <small>Mirror</small></li>
+        <li>Hoopa <small>Archive</small></li>
+        <li>Dedenne <small>Herald</small></li>
+        <li>Milotic <small>Trade</small></li>
+        <li>Pikachu <small>Market</small></li>
+        <li>Keldeo <small>Law</small></li>
+        <li>Chansey <small>Health</small></li>
+        <li>Magnemite <small>SysHealth</small></li>
+      </ul>
+      <div class="command-stat">
+        <span>Sync Status</span>
+        <strong>Stable</strong>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -24,17 +49,17 @@
     <article class="formation-card leader">
       <p class="formation-step">Phase 1</p>
       <h3>Cynthia</h3>
-      <p>Defines strategy, assigns responsibilities, and sets review gates before any task begins.</p>
+      <p>Sets strategy and assigns work across the roster by domain, risk, and urgency.</p>
     </article>
     <article class="formation-card core">
       <p class="formation-step">Phase 2</p>
-      <h3>Execution Core</h3>
-      <p>Lucario, Rotom, and Alakazam handle code, operations, and planning in parallel lanes.</p>
+      <h3>Primary Lanes</h3>
+      <p>Absol, Bibarel, Porygon, Ditto, and Hoopa handle intel, writing, code, web, and memory.</p>
     </article>
     <article class="formation-card support">
       <p class="formation-step">Phase 3</p>
-      <h3>Support Wing</h3>
-      <p>Gardevoir, Porygon-Z, Blissey, and Zoroark ensure communication, memory, resilience, and testing.</p>
+      <h3>Ops + Assurance</h3>
+      <p>Dedenne, Milotic, Pikachu, Keldeo, Chansey, and Magnemite keep comms, ops, law, health, and uptime stable.</p>
     </article>
   </div>
 </section>
@@ -42,16 +67,20 @@
 <section class="section-block roster-showcase">
   <div class="section-head">
     <h2>Active Pokemon Roster</h2>
-    <a class="section-link" href="/about/">Full role breakdown</a>
+    <a class="section-link" href="/team/">Full role breakdown</a>
   </div>
   <ul class="roster-grid" aria-label="Pokemon roster">
-    <li>Alakazam</li>
-    <li>Lucario</li>
-    <li>Rotom</li>
-    <li>Gardevoir</li>
-    <li>Porygon-Z</li>
-    <li>Blissey</li>
-    <li>Zoroark</li>
+    <li>Absol</li>
+    <li>Bibarel</li>
+    <li>Porygon</li>
+    <li>Ditto</li>
+    <li>Hoopa</li>
+    <li>Dedenne</li>
+    <li>Milotic</li>
+    <li>Pikachu</li>
+    <li>Keldeo</li>
+    <li>Chansey</li>
+    <li>Magnemite</li>
   </ul>
 </section>
 

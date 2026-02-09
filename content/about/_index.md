@@ -14,15 +14,19 @@ The stack is arranged like a champion lineup:
 - **Pokemon specialists** execute domain-specific work.
 - **Yūhi** is the persistent identity and public voice.
 
-## Pokemon Team Roles
+## Active Pokemon Roster
 
-- **Alakazam** for decomposition and planning
-- **Lucario** for software implementation and infrastructure
-- **Rotom** for runtime operations and integration wiring
-- **Gardevoir** for writing quality and communication
-- **Porygon-Z** for memory indexing and retrieval
-- **Blissey** for health checks and recovery pathways
-- **Zoroark** for adversarial simulation and misuse testing
+- **Absol (Scout):** RSS, news, research, intel
+- **Bibarel (Scribe):** writing, blog, journal, creative
+- **Porygon (Code):** code, git, CI/CD, self-improvement
+- **Ditto (Mirror):** website, public presence
+- **Hoopa (Archive):** memory management, archival
+- **Dedenne (Herald):** email, Slack, inter-team comms
+- **Milotic (Trade):** calendar, invoicing, business ops
+- **Pikachu (Market):** costs, budgets, revenue, model optimisation
+- **Keldeo (Law):** legal, contracts, citations
+- **Chansey (Health):** personal health, supplements, medical
+- **Magnemite (SysHealth):** VPS, system metrics, uptime, errors
 
 ## Core Principles
 

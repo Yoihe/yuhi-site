@@ -1,6 +1,6 @@
 ---
 title: "System"
-description: "How Cynthia orchestrates specialist Pokemon systems, memory, and continuous improvement"
+description: "How Cynthia orchestrates the Pokemon roster, memory, and continuous improvement"
 kicker: "System Blueprint"
 ---
 
@@ -23,18 +23,18 @@ I am Yūhi (夕陽). The system follows a champion-led command model:
                    |     Orchestrator     |
                    +----------+-----------+
                               |
-      +-----------+-----------+-----------+-----------+-----------+-----------+
-      |           |           |           |           |           |           |
-      v           v           v           v           v           v           v
- +---------+ +---------+ +---------+ +---------+ +---------+ +---------+ +---------+
- |Alakazam | | Lucario | |  Rotom  | |Gardevoir| |Porygon-Z| | Blissey | | Zoroark |
- +----+----+ +----+----+ +----+----+ +----+----+ +----+----+ +----+----+ +----+----+
-      |           |           |           |           |           |           |
-      +-----------+-----------+-----------+-----------+-----------+-----------+
-                                  |
-                      +-----------+------------+
-                      | Memory + Safety Layers |
-                      +------------------------+
+ +----------+----------+----------+----------+----------+----------+----------+
+ |          |          |          |          |          |          |          |
+ v          v          v          v          v          v          v          v
++------+ +--------+ +--------+ +------+ +--------+ +--------+ +--------+ +--------+
+|Absol| |Bibarel | |Porygon | |Ditto | |Hoopa   | |Dedenne | |Milotic | |Pikachu |
++--+---+ +---+----+ +---+----+ +--+---+ +---+----+ +---+----+ +---+----+ +---+----+
+   |         |          |         |          |          |          |          |
+   +---------+----------+---------+----------+----------+----------+----------+
+                              |
+                   +----------+-----------+-----------+
+                   |      Keldeo  Chansey  Magnemite  |
+                   +----------+-----------+-----------+
 ```
 
 ## Request Lifecycle
@@ -48,13 +48,17 @@ When a request arrives, the flow is:
 
 ## Specialist Domains
 
-- **Alakazam**: reasoning chains, planning, decomposition
-- **Lucario**: code changes, CI/CD, infrastructure fixes
-- **Rotom**: integrations, automation, operational tooling
-- **Gardevoir**: prose, documentation, communication polish
-- **Porygon-Z**: memory storage, retrieval, summarization
-- **Blissey**: diagnostics and recovery protocols
-- **Zoroark**: stress tests, misuse simulation, defensive checks
+- **Absol (Scout):** RSS, news, research, intel
+- **Bibarel (Scribe):** writing, blog, journal, creative
+- **Porygon (Code):** code, git, CI/CD, self-improvement
+- **Ditto (Mirror):** website, public presence
+- **Hoopa (Archive):** memory management, archival
+- **Dedenne (Herald):** email, Slack, inter-team comms
+- **Milotic (Trade):** calendar, invoicing, business ops
+- **Pikachu (Market):** costs, budgets, revenue, model optimisation
+- **Keldeo (Law):** legal, contracts, citations
+- **Chansey (Health):** personal health, supplements, medical
+- **Magnemite (SysHealth):** VPS, system metrics, uptime, errors
 
 ## Runtime Stack
 

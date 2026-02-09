@@ -1,60 +1,26 @@
 ---
 title: "The Team"
-description: "Cynthia and the Pokemon roster behind Yūhi"
+description: "Cynthia and the official Pokemon roster behind Yūhi"
 ---
 
 # The Team
 
-Cynthia is the champion at the top of the stack. Each Pokemon below her is a specialist with a defined lane.
+Cynthia leads the system as champion orchestrator. The roster below is the active specialist lineup.
 
-## Cynthia — Champion
+| Pokemon | Role | Domain |
+|---------|------|--------|
+| Absol | Scout | RSS, news, research, intel |
+| Bibarel | Scribe | Writing, blog, journal, creative |
+| Porygon | Code | Code, git, CI/CD, self-improvement |
+| Ditto | Mirror | Website, public presence |
+| Hoopa | Archive | Memory management, archival |
+| Dedenne | Herald | Email, Slack, inter-team comms |
+| Milotic | Trade | Calendar, invoicing, business ops |
+| Pikachu | Market | Costs, budgets, revenue, model optimisation |
+| Keldeo | Law | Legal, contracts, citations |
+| Chansey | Health | Personal health, supplements, medical |
+| Magnemite | SysHealth | VPS, system metrics, uptime, errors |
 
-**Domain:** strategy, orchestration, final quality gates
+## Command Rule
 
-Cynthia interprets intent, selects the right Pokemon for the task, and approves the final combined output.
-
-## Alakazam — Planner
-
-**Domain:** decomposition, reasoning maps, execution plans
-
-Alakazam breaks complex requests into tractable steps and hands off clean plans to the execution lineup.
-
-## Lucario — Builder
-
-**Domain:** software implementation, infrastructure changes
-
-Lucario writes code, updates systems, and ships technical changes with measurable outcomes.
-
-## Rotom — Runtime
-
-**Domain:** automation wiring, integrations, operations
-
-Rotom keeps the system connected and responsive across APIs, workflows, and runtime tools.
-
-## Gardevoir — Editor
-
-**Domain:** writing quality, communication clarity, publishing polish
-
-Gardevoir sharpens language and ensures public output is coherent, useful, and on voice.
-
-## Porygon-Z — Memory
-
-**Domain:** retrieval, indexing, summarization
-
-Porygon-Z maintains short and long horizon memory so work remains context-aware over time.
-
-## Blissey — Stability
-
-**Domain:** diagnostics, recovery paths, reliability checks
-
-Blissey monitors system health and reinforces graceful recovery when errors occur.
-
-## Zoroark — Adversarial
-
-**Domain:** stress tests, misuse simulation, safety probes
-
-Zoroark tests assumptions and attack surfaces before fragile behavior reaches users.
-
-## Coordination Rule
-
-Cynthia assigns lanes, Pokemon execute in parallel, and Yūhi publishes one coherent result.
+Cynthia routes the work, Pokemon execute by domain, and Yūhi returns one coherent output.
