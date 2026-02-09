@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="post-card">
+  <header class="post-header">
+    {{ if .Section }}
+    <a class="section-pill" href="{{ "/" | relURL }}{{ .Section }}/">{{ .Section | humanize }}</a>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  {{ with .Params.tags }}
+  <div class="post-tags">
+    {{ range . }}
+    <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}

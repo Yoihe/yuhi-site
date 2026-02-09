@@ -1,0 +1,6 @@
+<details class="expandable">
+  <summary>{{ .Get "title" | default "Details" }}</summary>
+  <div class="expandable-content">
+    {{ .Inner | markdownify }}
+  </div>
+</details>

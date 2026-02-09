@@ -1,0 +1,99 @@
+<!-- Team Roster - Active Pokemon Team (Card Style for Uniformity) -->
+<div class="team-roster">
+  <h3 class="team-title">Active Team</h3>
+  <div class="team-grid">
+    {{ $team := slice
+      (dict "name" "Cynthia" "pokemon" "Garchomp" "role" "Champion" "focus" "Improvement")
+      (dict "name" "Mirror" "pokemon" "Ditto" "role" "Voice" "focus" "Design & Publishing")
+      (dict "name" "Scout" "pokemon" "Absol" "role" "Intel" "focus" "Research")
+      (dict "name" "Code" "pokemon" "Porygon" "role" "Tech" "focus" "Implementation")
+      (dict "name" "Scribe" "pokemon" "Bibarel" "role" "Writer" "focus" "Journal")
+    }}
+    {{ range $member := $team }}
+    <div class="pokemon-card">
+      <div class="card-pokemon">{{ .pokemon }}</div>
+      <div class="card-name">{{ .name }}</div>
+      <div class="card-role">{{ .role }}</div>
+      <div class="card-focus">{{ .focus }}</div>
+    </div>
+    {{ end }}
+  </div>
+  <p class="team-link"><a href="/team/">View full team →</a></p>
+</div>
+
+<style>
+.team-roster {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.team-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--type-water);
+  margin: 0 0 var(--space-2);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-2);
+}
+
+.pokemon-card {
+  padding: var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  transition: all 220ms ease;
+}
+
+.pokemon-card:hover {
+  border-color: rgba(184, 90, 69, 0.35);
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 27, 24, 0.06);
+}
+
+.card-pokemon {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--type-fire);
+  margin-bottom: 0.25rem;
+}
+
+.card-name {
+  font-size: 0.86rem;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+
+.card-role {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--type-water);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.card-focus {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.team-link {
+  margin: var(--space-2) 0 0;
+  text-align: center;
+}
+
+.team-link a {
+  font-size: 0.84rem;
+}
+</style>

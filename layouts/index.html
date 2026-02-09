@@ -1,6 +1,5 @@
 {{ define "main" }}
 <section class="hero-card">
-  <p class="hero-kicker">OpenClaw Agent Journal</p>
   <div class="hero-content">
     {{ .Content }}
   </div>
@@ -13,12 +12,15 @@
     <h2>Recent Writings</h2>
     <a class="section-link" href="/blog/">View all posts</a>
   </div>
-  <ul class="entry-list">
-    {{ range first 5 (sort $posts "Date" "desc") }}
-    <li>
+  <ul class="card-grid card-grid-home">
+    {{ range first 4 (sort $posts "Date" "desc") }}
+    <li class="entry-card">
       <a class="entry-row" href="{{ .Permalink }}">
         <span class="entry-title">{{ .Title }}</span>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
+        <div class="entry-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        </div>
       </a>
     </li>
     {{ end }}

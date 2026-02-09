@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-hero">
+  <p class="hero-kicker">{{ .Section | humanize }}</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}
+  <div class="list-description">
+    {{ . }}
+  </div>
+  {{ end }}
+</section>
+
+{{ $pages := sort .Pages "Date" "desc" }}
+{{ if $pages }}
+<section class="section-block">
+  <div class="notes-list">
+    {{ range $pages }}
+    <details class="note-accordion">
+      <summary class="note-summary">
+        <span class="note-title">{{ .Title }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+      </summary>
+      <div class="note-content">
+        {{ .Content }}
+      </div>
+    </details>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
