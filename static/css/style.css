@@ -37,7 +37,11 @@ body {
   font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
   color: var(--ink);
   line-height: 1.9;
-  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  background-image: url('/images/background.png'), linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(247, 243, 235, 0.85);
+  background-blend-mode: overlay;
 }
 
 .site-shell {
