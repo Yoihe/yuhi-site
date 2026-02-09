@@ -1,87 +1,8 @@
 {{ define "main" }}
-<section class="hero-card hero-battle">
-  <div class="hero-grid">
-    <div class="hero-command">
-      <p class="hero-kicker">Champion Command Layer</p>
-      <h1 class="hero-title">Cynthia Commands The Roster.</h1>
-      <div class="hero-content">
-        {{ .Content }}
-      </div>
-      <div class="hero-actions">
-        <a class="btn-battle" href="/architecture/">Open System Dex</a>
-        <a class="btn-outline" href="/team/">View Full Roster</a>
-      </div>
-      <div class="hero-badges" aria-label="System highlights">
-        <span>Trainer Orchestrated</span>
-        <span>11 Pokemon Specialists</span>
-        <span>Memory + Guardrails</span>
-      </div>
-    </div>
-
-    <aside class="hero-console" aria-label="Roster command panel">
-      <p class="console-kicker">Active Squad</p>
-      <ul class="mini-roster">
-        <li>Absol <small>Scout</small></li>
-        <li>Bibarel <small>Scribe</small></li>
-        <li>Porygon <small>Code</small></li>
-        <li>Ditto <small>Mirror</small></li>
-        <li>Hoopa <small>Archive</small></li>
-        <li>Dedenne <small>Herald</small></li>
-        <li>Milotic <small>Trade</small></li>
-        <li>Pikachu <small>Market</small></li>
-        <li>Keldeo <small>Law</small></li>
-        <li>Chansey <small>Health</small></li>
-        <li>Magnemite <small>SysHealth</small></li>
-      </ul>
-      <div class="command-stat">
-        <span>Sync Status</span>
-        <strong>Stable</strong>
-      </div>
-    </aside>
+<section class="hero-card">
+  <div class="hero-content">
+    {{ .Content }}
   </div>
-</section>
-
-<section class="section-block formation">
-  <div class="section-head">
-    <h2>Battle Formation</h2>
-  </div>
-  <div class="formation-grid">
-    <article class="formation-card leader">
-      <p class="formation-step">Phase 1</p>
-      <h3>Cynthia</h3>
-      <p>Sets strategy and assigns work across the roster by domain, risk, and urgency.</p>
-    </article>
-    <article class="formation-card core">
-      <p class="formation-step">Phase 2</p>
-      <h3>Primary Lanes</h3>
-      <p>Absol, Bibarel, Porygon, Ditto, and Hoopa handle intel, writing, code, web, and memory.</p>
-    </article>
-    <article class="formation-card support">
-      <p class="formation-step">Phase 3</p>
-      <h3>Ops + Assurance</h3>
-      <p>Dedenne, Milotic, Pikachu, Keldeo, Chansey, and Magnemite keep comms, ops, law, health, and uptime stable.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section-block roster-showcase">
-  <div class="section-head">
-    <h2>Active Pokemon Roster</h2>
-    <a class="section-link" href="/team/">Full role breakdown</a>
-  </div>
-  <ul class="roster-grid" aria-label="Pokemon roster">
-    <li>Absol</li>
-    <li>Bibarel</li>
-    <li>Porygon</li>
-    <li>Ditto</li>
-    <li>Hoopa</li>
-    <li>Dedenne</li>
-    <li>Milotic</li>
-    <li>Pikachu</li>
-    <li>Keldeo</li>
-    <li>Chansey</li>
-    <li>Magnemite</li>
-  </ul>
 </section>
 
 {{ $posts := (where .Site.RegularPages "Section" "blog") }}
@@ -91,12 +12,15 @@
     <h2>Recent Writings</h2>
     <a class="section-link" href="/blog/">View all posts</a>
   </div>
-  <ul class="entry-list">
-    {{ range first 5 (sort $posts "Date" "desc") }}
-    <li>
+  <ul class="card-grid card-grid-home">
+    {{ range first 4 (sort $posts "Date" "desc") }}
+    <li class="entry-card">
       <a class="entry-row" href="{{ .Permalink }}">
         <span class="entry-title">{{ .Title }}</span>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
+        <div class="entry-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        </div>
       </a>
     </li>
     {{ end }}

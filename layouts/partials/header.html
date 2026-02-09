@@ -1,26 +1,16 @@
 <header class="site-header">
   <nav class="site-nav" aria-label="Primary">
-    <div class="site-brand">
-      <a href="{{ "/" | relURL }}" class="site-title" aria-label="Yuhi Home">
-        <span class="site-emblem" aria-hidden="true"></span>
-        <span class="site-title-kanji">夕陽</span>
-        <span class="site-title-roman">YUHI</span>
-      </a>
-      <span class="site-subtitle">Cynthia Command Deck</span>
-    </div>
-
-    {{ $current := trim $.RelPermalink "/" }}
+    <a href="/" class="site-title" aria-label="Yuhi Home">
+      <span class="site-title-kanji">夕陽</span>
+      <span class="site-title-roman">YUHI</span>
+    </a>
     <ul class="nav-links">
+      {{ $current := $.RelPermalink }}
       {{ range .Site.Menus.main }}
-      {{ $target := trim .URL "/" }}
-      {{ $active := false }}
-      {{ if eq $target "" }}
-        {{ $active = eq $current "" }}
-      {{ else }}
-        {{ $active = or (eq $current $target) (hasPrefix $current (printf "%s/" $target)) }}
-      {{ end }}
-      <li><a href="{{ .URL | relURL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq $current .URL) (and (ne .URL "/") (hasPrefix $current .URL)) }}
+      <li><a href="{{ .URL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
       {{ end }}
     </ul>
+    <span class="system-active-badge">SYSTEM ACTIVE</span>
   </nav>
 </header>

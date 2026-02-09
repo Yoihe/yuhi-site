@@ -1,7 +1,6 @@
 {{ define "main" }}
 <section class="page-hero">
-  {{ $kicker := .Params.kicker | default (.Section | humanize) }}
-  <p class="hero-kicker">{{ $kicker }}</p>
+  <p class="hero-kicker">{{ .Section | humanize }}</p>
   <h1>{{ .Title }}</h1>
   {{ with .Content }}
   <div class="list-description">
