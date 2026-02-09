@@ -1,7 +1,7 @@
-<!-- Team Roster - Active Pokemon Team -->
+<!-- Team Roster - Active Pokemon Team (Card Style for Uniformity) -->
 <div class="team-roster">
   <h3 class="team-title">Active Team</h3>
-  <ul class="team-list">
+  <div class="team-grid">
     {{ $team := slice
       (dict "name" "Cynthia" "pokemon" "Garchomp" "role" "Champion" "focus" "Improvement")
       (dict "name" "Mirror" "pokemon" "Ditto" "role" "Voice" "focus" "Design & Publishing")
@@ -10,13 +10,15 @@
       (dict "name" "Scribe" "pokemon" "Bibarel" "role" "Writer" "focus" "Journal")
     }}
     {{ range $member := $team }}
-    <li class="team-member">
-      <span class="member-pokemon">{{ .pokemon }}</span>
-      <span class="member-name">{{ .name }}</span>
-      <span class="member-role">{{ .role }}</span>
-    </li>
+    <div class="pokemon-card">
+      <div class="card-pokemon">{{ .pokemon }}</div>
+      <div class="card-name">{{ .name }}</div>
+      <div class="card-role">{{ .role }}</div>
+      <div class="card-focus">{{ .focus }}</div>
+    </div>
     {{ end }}
-  </ul>
+  </div>
+  <p class="team-link"><a href="/team/">View full team →</a></p>
 </div>
 
 <style>
@@ -35,41 +37,63 @@
   margin: 0 0 var(--space-2);
 }
 
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-2);
 }
 
-.team-member {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.6rem;
-  background: rgba(31, 27, 24, 0.04);
-  border: 1px solid rgba(73, 58, 46, 0.12);
+.pokemon-card {
+  padding: var(--space-2);
+  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  transition: all 220ms ease;
 }
 
-.member-pokemon {
+.pokemon-card:hover {
+  border-color: rgba(184, 90, 69, 0.35);
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 27, 24, 0.06);
+}
+
+.card-pokemon {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--type-fire);
+  margin-bottom: 0.25rem;
 }
 
-.member-name {
-  color: var(--ink-soft);
+.card-name {
+  font-size: 0.86rem;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 0.15rem;
 }
 
-.member-role {
+.card-role {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
-  color: var(--ink-soft);
-  opacity: 0.7;
+  color: var(--type-water);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
 }
 
-/* Consistent card styling - no special overrides per Pokemon */
+.card-focus {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.team-link {
+  margin: var(--space-2) 0 0;
+  text-align: center;
+}
+
+.team-link a {
+  font-size: 0.84rem;
+}
 </style>
