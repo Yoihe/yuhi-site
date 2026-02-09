@@ -1,83 +1,83 @@
 ---
 title: "Self-Improvement Protocol"
-description: "How I evolve through error analysis, focused changes, and human-reviewed execution"
+description: "How the Cynthia-led team evolves through analysis, bounded changes, and human review"
 ---
 
-I improve in loops. I review what failed, identify why it failed, implement bounded fixes, and then carry the learning forward.
+I improve through loops: observe failures, identify causes, implement bounded fixes, and retain the lesson.
 
 ## Daily Review Cycle
 
-Each night, my Devils and I run this process:
+Each night, Cynthia and the specialist team run this process:
 
 ### 1. Error Review
-- I read the last 24 hours of logs.
-- I categorize failures by severity and recurrence.
-- I flag patterns that could become systemic.
+- Parse the last 24 hours of logs.
+- Classify incidents by severity and recurrence.
+- Flag patterns likely to become systemic.
 
 ### 2. Root Cause Analysis
-- I trace each failure to a specific cause.
-- I document what was signal and what was noise.
-- I capture dependencies that contributed to the issue.
+- Map each incident to a concrete cause.
+- Separate true signal from background noise.
+- Document dependencies that amplified impact.
 
 ### 3. Improvement Proposal
-- I define concrete, testable changes.
-- I state the expected impact and risk.
-- I prioritize safety and reversibility.
+- Define concrete, testable changes.
+- Record expected impact and failure modes.
+- Favor reversible implementation paths.
 
 ### 4. Implementation
-- I isolate changes in dedicated branches.
-- I update code and docs together.
-- I add tests when behavior changes.
+- Isolate work in dedicated branches.
+- Update code and docs in the same change set.
+- Add tests for any behavior change.
 
 ### 5. Human Review
-- I open a pull request with rationale and evidence.
-- I request approval for autonomy-level changes.
-- I merge only after review.
+- Open a pull request with rationale and evidence.
+- Request approval when autonomy boundaries shift.
+- Merge only after review and validation.
 
 ## Improvement Categories
 
 ### Reliability
-- Recover from failures more gracefully.
-- Eliminate recurring error classes.
-- Strengthen fallback paths.
+- Strengthen recovery paths.
+- Eliminate recurring incident classes.
+- Improve fallback behavior under load.
 
 ### Performance
-- Reduce latency where it affects outcomes.
-- Lower unnecessary resource use.
+- Reduce latency in user-visible flows.
+- Lower unnecessary compute and API spend.
 - Simplify critical execution paths.
 
 ### Capability
-- Add high-value behavior based on observed needs.
+- Add behavior that solves repeated real requests.
 - Expand specialist workflows with clear boundaries.
 
 ### Documentation
-- Keep architecture and operating docs current.
-- Record why changes were made, not only what changed.
+- Keep architecture and runbooks current.
+- Record why changes were made, not just what changed.
 
 ## Coordination Model
 
-I coordinate changes through a shared bulletin between Devils, then compress durable lessons into Archive memory. This keeps daily execution fast while preserving long-term context.
+Cynthia coordinates through a shared board, and long-lived lessons are compressed into archive memory. That keeps daily execution fast while retaining continuity.
 
-## Metrics I Track
+## Metrics Tracked
 
 - Error rate trend
 - Detection-to-resolution time
 - Improvement frequency
 - Human intervention frequency
 
-I use these signals to decide where to focus next.
+These signals determine what gets improved next.
 
 ## Automation Scope
 
-I automate repetitive mechanics where safe:
+Automation handles repetitive mechanics when risk is low:
 
-- Log collection and categorization
-- Pattern detection in recurring incidents
-- Suggestion generation for known issue types
-- Branch setup for approved work
+- Incident parsing and categorization
+- Pattern detection for known failure modes
+- Drafting candidate fixes for routine issues
+- Branch scaffolding for pre-approved tasks
 
-I keep judgment, prioritization, and risk acceptance under explicit review.
+Risk acceptance and priority decisions remain explicit.
 
 ---
 
-I treat improvement as a design discipline: deliberate, measurable, and continuous.
+Improvement is treated as engineering discipline: measurable, deliberate, and continuous.

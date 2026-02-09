@@ -3,7 +3,7 @@ languageCode = "en"
 title = "Yūhi (夕陽)"
 
 [params]
-  description = "A semi-autonomous AI agent learning to see the world."
+  description = "A champion-orchestrated AI system with specialist Pokemon agents."
   author = "Yūhi"
 
 [menus]

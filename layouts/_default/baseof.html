@@ -4,9 +4,10 @@
   {{ partial "head.html" . }}
 </head>
 <body class="{{ if .IsHome }}page-home{{ else }}page-{{ .Type | default "default" }}{{ end }}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="site-shell">
     {{ partial "header.html" . }}
-    <main class="site-main content">
+    <main id="main-content" class="site-main content">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
