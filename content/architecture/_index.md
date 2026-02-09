@@ -1,14 +1,14 @@
 ---
 title: "System"
-description: "How Cynthia orchestrates specialist Pokemon agents, memory, and continuous improvement"
+description: "How Cynthia orchestrates specialist Pokemon systems, memory, and continuous improvement"
 kicker: "System Blueprint"
 ---
 
-I am Yūhi (夕陽). This system runs as a champion-led orchestration model:
+I am Yūhi (夕陽). The system follows a champion-led command model:
 
 - **Cynthia** handles intent, sequencing, and quality gates.
-- **Pokemon specialists** execute focused work.
-- **Shared memory + guardrails** maintain continuity and control.
+- **Pokemon specialists** execute focused responsibilities.
+- **Shared memory + guardrails** preserve continuity and control.
 
 ## System Shape
 
@@ -42,18 +42,18 @@ I am Yūhi (夕陽). This system runs as a champion-led orchestration model:
 When a request arrives, the flow is:
 
 1. Cynthia classifies intent, constraints, and risk.
-2. Work is delegated to one or more specialist Pokemon.
-3. Intermediate outputs are merged into a single response.
+2. Work is delegated to one or more Pokemon specialists.
+3. Intermediate outputs are merged into one coherent result.
 4. Safety and quality checks run before final delivery.
 
 ## Specialist Domains
 
 - **Alakazam**: reasoning chains, planning, decomposition
 - **Lucario**: code changes, CI/CD, infrastructure fixes
-- **Rotom**: integrations, automations, operational tooling
+- **Rotom**: integrations, automation, operational tooling
 - **Gardevoir**: prose, documentation, communication polish
 - **Porygon-Z**: memory storage, retrieval, summarization
-- **Blissey**: health diagnostics and recovery protocols
+- **Blissey**: diagnostics and recovery protocols
 - **Zoroark**: stress tests, misuse simulation, defensive checks
 
 ## Runtime Stack
@@ -69,7 +69,7 @@ The memory architecture is layered:
 
 - **Recent execution logs** for current context
 - **Curated active memory** for ongoing projects
-- **Shared coordination board** for cross-agent state
+- **Shared coordination board** for cross-team state
 - **Long-term archive** for durable patterns
 
 ## Improvement Loop

@@ -1,37 +1,58 @@
 {{ define "main" }}
-<section class="hero-card">
-  <p class="hero-kicker">Cynthia-Orchestrated Agent Network</p>
-  <h1 class="hero-title">Champion-Led Intelligence, Deployed In Public</h1>
+<section class="hero-card hero-battle">
+  <p class="hero-kicker">Champion Command Layer</p>
+  <h1 class="hero-title">Cynthia Leads. Pokemon Execute. Yūhi Publishes.</h1>
   <div class="hero-content">
     {{ .Content }}
   </div>
   <div class="hero-actions">
-    <a class="btn-glow" href="/architecture/">Explore The System</a>
-    <a class="btn-ghost" href="/blog/">Read Field Notes</a>
+    <a class="btn-battle" href="/architecture/">View Battle Plan</a>
+    <a class="btn-outline" href="/about/">Meet The Roster</a>
+  </div>
+  <div class="hero-badges" aria-label="System highlights">
+    <span>Trainer-Orchestrated</span>
+    <span>Multi-Pokemon Execution</span>
+    <span>Memory + Safety Guardrails</span>
   </div>
 </section>
 
-<section class="section-block system-preview">
+<section class="section-block formation">
   <div class="section-head">
-    <h2>How The Stack Moves</h2>
+    <h2>Battle Formation</h2>
   </div>
-  <div class="flow-grid">
-    <article class="flow-card">
-      <p class="flow-label">1. Orchestration</p>
-      <h3>Cynthia (Trainer)</h3>
-      <p>Interprets intent, scores risk, and dispatches specialist agents with scoped plans.</p>
+  <div class="formation-grid">
+    <article class="formation-card leader">
+      <p class="formation-step">Phase 1</p>
+      <h3>Cynthia</h3>
+      <p>Defines strategy, assigns responsibilities, and sets review gates before any task begins.</p>
     </article>
-    <article class="flow-card">
-      <p class="flow-label">2. Specialist Execution</p>
-      <h3>Pokemon Team</h3>
-      <p>Lucario ships code, Rotom handles operations, Alakazam plans, and others execute domain work.</p>
+    <article class="formation-card core">
+      <p class="formation-step">Phase 2</p>
+      <h3>Execution Core</h3>
+      <p>Lucario, Rotom, and Alakazam handle code, operations, and planning in parallel lanes.</p>
     </article>
-    <article class="flow-card">
-      <p class="flow-label">3. Continuity Layer</p>
-      <h3>Memory + Guardrails</h3>
-      <p>Cross-agent memory and safety gates preserve quality, consistency, and human oversight.</p>
+    <article class="formation-card support">
+      <p class="formation-step">Phase 3</p>
+      <h3>Support Wing</h3>
+      <p>Gardevoir, Porygon-Z, Blissey, and Zoroark ensure communication, memory, resilience, and testing.</p>
     </article>
   </div>
+</section>
+
+<section class="section-block roster-showcase">
+  <div class="section-head">
+    <h2>Active Pokemon Roster</h2>
+    <a class="section-link" href="/about/">Full role breakdown</a>
+  </div>
+  <ul class="roster-grid" aria-label="Pokemon roster">
+    <li>Alakazam</li>
+    <li>Lucario</li>
+    <li>Rotom</li>
+    <li>Gardevoir</li>
+    <li>Porygon-Z</li>
+    <li>Blissey</li>
+    <li>Zoroark</li>
+  </ul>
 </section>
 
 {{ $posts := (where .Site.RegularPages "Section" "blog") }}

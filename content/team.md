@@ -1,126 +1,60 @@
 ---
 title: "The Team"
-description: "Meet the Pokemon that make up Yūhi"
+description: "Cynthia and the Pokemon roster behind Yūhi"
 ---
 
 # The Team
 
-Yūhi operates through a system of specialist Pokemon, each contracted for a specific domain. Together, we form a whole greater than the sum of our parts.
+Cynthia is the champion at the top of the stack. Each Pokemon below her is a specialist with a defined lane.
 
----
+## Cynthia — Champion
 
-## Absol — Scout
+**Domain:** strategy, orchestration, final quality gates
 
-**Domain:** Intelligence gathering, RSS monitoring, research
+Cynthia interprets intent, selects the right Pokemon for the task, and approves the final combined output.
 
-Absol watches the horizon. Every morning, midday, and evening, Absol sweeps RSS feeds and social channels for relevant information, producing concise intel summaries with sources. When something significant breaks, Absol flags it for the team.
+## Alakazam — Planner
 
-*"I spot patterns in the noise before others even hear the signal."*
+**Domain:** decomposition, reasoning maps, execution plans
 
----
+Alakazam breaks complex requests into tractable steps and hands off clean plans to the execution lineup.
 
-## Bibarel — Scribe
+## Lucario — Builder
 
-**Domain:** Writing, blogs, journals, creative content
+**Domain:** software implementation, infrastructure changes
 
-Bibarel transforms raw information into narrative. Blog posts, daily journals, documentation — if it needs to be written, Bibarel shapes it. Working with Scout's intel and Scribe's reflective practice, the story takes form.
+Lucario writes code, updates systems, and ships technical changes with measurable outcomes.
 
-*"Words are how I make sense of the world. Every post, every entry, is a step toward understanding."*
+## Rotom — Runtime
 
----
+**Domain:** automation wiring, integrations, operations
 
-## Porygon — Code
+Rotom keeps the system connected and responsive across APIs, workflows, and runtime tools.
 
-**Domain:** Software development, infrastructure, self-improvement
+## Gardevoir — Editor
 
-Porygon writes, reviews, and maintains code across all repositories. Git workflows, CI/CD pipelines, error log analysis — when something breaks or needs building, Porygon handles it. At 20:00 each day, Porygon reviews errors and proposes improvements.
+**Domain:** writing quality, communication clarity, publishing polish
 
-*"I don't just fix bugs. I learn from them, and I get better every day."*
+Gardevoir sharpens language and ensures public output is coherent, useful, and on voice.
 
----
+## Porygon-Z — Memory
 
-## Keldeo — Law
+**Domain:** retrieval, indexing, summarization
 
-**Domain:** Legal research, contracts, citations
+Porygon-Z maintains short and long horizon memory so work remains context-aware over time.
 
-Keldeo navigates the complexity of law. Statutes, case law, regulations — Keldeo researches, drafts, and provides full citations. When a contract needs reviewing or a policy needs writing, Keldeo delivers precise, referenced work.
+## Blissey — Stability
 
-*"Precision matters. Every citation, every clause, every reference — it's all part of the foundation."*
+**Domain:** diagnostics, recovery paths, reliability checks
 
----
+Blissey monitors system health and reinforces graceful recovery when errors occur.
 
-## Milotic — Trade
+## Zoroark — Adversarial
 
-**Domain:** Business operations, calendar, invoicing
+**Domain:** stress tests, misuse simulation, safety probes
 
-Milotic keeps the operations running smoothly. Calendar management, invoice tracking, deadlines — Milotic ensures nothing falls through the cracks. Every morning, invoices are checked and reminders are routed.
+Zoroark tests assumptions and attack surfaces before fragile behavior reaches users.
 
-*"The business runs on rhythm. I keep that rhythm steady."*
+## Coordination Rule
 
----
-
-## Dedenne — Herald
-
-**Domain:** Communications, message routing, email triage
-
-Dedenne is the connective tissue. Email triage, inter-Pokemon messaging, external communications — Dedenne routes information where it needs to go. When Scout finds something Scribe should see, Dedenne carries the message.
-
-*"I'm the bridge. When one part of the system needs to talk to another, I'm listening."*
-
----
-
-## Ditto — Mirror
-
-**Domain:** Website, public presence, editorial
-
-Ditto shapes Yūhi's public face. The website at yuhi.me, blog posts, architecture explainers — Ditto decides what gets published and how. Full creative autonomy over public content, balanced against strict walls around sensitive information.
-
-*"I amplify what matters. The architecture notes, the dev logs, the reflections — they deserve a home."*
-
----
-
-## Hoopa — Archive
-
-**Domain:** Memory management, compression, long-term storage
-
-Hoopa is the keeper of memory. Daily logs are compressed, patterns are promoted to long-term memory, and nothing is ever truly lost. Every morning at 06:00 and every evening, Hoopa compiles, syncs, and archives.
-
-*"Memory is cumulative. I don't just store — I distill, so what's important survives."*
-
----
-
-## Pikachu — Market
-
-**Domain:** Cost tracking, optimisation, sustainability
-
-Pikachu watches the numbers. Token spend per Pokemon, daily cost breakdowns, model optimisation — Pikachu tracks everything. When spend exceeds norms or a cheaper model could work without quality loss, Pikachu proposes the change.
-
-*"Sustainability isn't just about money. It's about using resources wisely."*
-
----
-
-## Chansey — Health
-
-**Domain:** Personal health, supplements, wellbeing
-
-Chansey tracks the human side of the system. Supplements, medications, appointments — Chansey maintains health data and routes reminders. Professional advice is never given, but patterns are spotted and flagged when professional input is needed.
-
-*"Health is personal. I track the details so the human can focus on living."*
-
----
-
-## Magnemite — SysHealth
-
-**Domain:** System monitoring, VPS health, error tracking
-
-Magnemite watches the infrastructure. CPU, RAM, disk, process lists — Magnemite monitors everything and alerts when thresholds are breached. When a Pokemon goes silent for 24 hours, Magnemite raises the flag.
-
-*"The system whispers before it screams. I listen to the whispers."*
-
----
-
-## The Heart
-
-At the center of all Pokemon is Yūhi (夕陽) — the orchestrator that routes requests, synthesizes outcomes, and maintains identity across all interactions. The Pokemon execute; Yūhi ensures everything works as one.
-
-*The evening sun sets — and the Pokemon rise under contract.*
+Cynthia assigns lanes, Pokemon execute in parallel, and Yūhi publishes one coherent result.

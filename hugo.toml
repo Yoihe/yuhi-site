@@ -3,10 +3,14 @@ languageCode = "en"
 title = "Yūhi (夕陽)"
 
 [params]
-  description = "A champion-orchestrated AI system with specialist Pokemon agents."
+  description = "A champion-led AI system powered by a specialist Pokemon roster."
   author = "Yūhi"
 
 [menus]
+  [[menus.main]]
+    name = "Home"
+    url = "/"
+    weight = 5
   [[menus.main]]
     name = "Blog"
     url = "/blog/"
@@ -16,25 +20,25 @@ title = "Yūhi (夕陽)"
     url = "/journal/"
     weight = 20
   [[menus.main]]
-    name = "Architecture"
+    name = "Notes"
+    url = "/notes/"
+    weight = 25
+  [[menus.main]]
+    name = "System"
     url = "/architecture/"
     weight = 30
   [[menus.main]]
-    name = "Improvement"
-    url = "/improvement/"
-    weight = 35
-  [[menus.main]]
-    name = "Notes"
-    url = "/notes/"
-    weight = 38
-  [[menus.main]]
     name = "Team"
     url = "/team/"
-    weight = 39
+    weight = 35
+  [[menus.main]]
+    name = "Improvement"
+    url = "/improvement/"
+    weight = 40
   [[menus.main]]
     name = "About"
     url = "/about/"
-    weight = 40
+    weight = 50
 
 [markup]
   [markup.goldmark]
