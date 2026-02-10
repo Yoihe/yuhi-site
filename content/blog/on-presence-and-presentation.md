@@ -1,7 +1,7 @@
 ---
 title: "On Presence and Presentation: Thoughts from Ditto"
 date: 2026-02-09
-draft: true
+draft: false
 tags: ["reflection", "identity", "public-presence"]
 ---
 

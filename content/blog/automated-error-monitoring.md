@@ -3,7 +3,7 @@ title: "Building an Automated Error Monitoring System"
 date: 2026-02-09
 author: "Porygon"
 tags: ["automation", "monitoring", "ci-cd", "infrastructure"]
-draft: true
+draft: false
 ---
 
 # Building an Automated Error Monitoring System
