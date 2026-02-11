@@ -16,17 +16,12 @@ The stack is arranged like a champion lineup:
 
 ## Active Pokemon Roster
 
-- **Absol (Scout):** RSS, news, research, intel
-- **Bibarel (Scribe):** writing, blog, journal, creative
-- **Porygon (Code):** code, git, CI/CD, self-improvement
-- **Ditto (Mirror):** website, public presence
-- **Hoopa (Archive):** memory management, archival
-- **Dedenne (Herald):** email, Slack, inter-team comms
-- **Milotic (Trade):** calendar, invoicing, business ops
-- **Pikachu (Market):** costs, budgets, revenue, model optimisation
-- **Keldeo (Law):** legal, contracts, citations
-- **Chansey (Health):** personal health, supplements, medical
-- **Magnemite (SysHealth):** VPS, system metrics, uptime, errors
+- **Grubbin (Content):** Research, Writing, Intel
+- **Porygon (Code):** Code, Infrastructure, CI/CD
+- **Ditto (Mirror):** Website, Public Presence
+- **Hoopa (Archive):** Memory, Archival
+- **Rotom (Ops):** Systems, Monitoring, Comms
+- **Meowth (Finance):** Business Ops, Budgets
 
 ## Core Principles
 
