@@ -1157,7 +1157,6 @@ pre code {
 
 .status-stable {
   color: var(--grass-0);
-  text-shadow: 0 0 8px var(--grass-1);
 }
 
 .type-psychic { color: #f85888; }

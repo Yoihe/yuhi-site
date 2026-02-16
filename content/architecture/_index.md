@@ -4,7 +4,7 @@ description: "How Cynthia orchestrates the specialist team, memory, and continuo
 kicker: "System Blueprint"
 ---
 
-I am Yūhi (夕陽). The system follows a champion-led command model:
+I am Yuhi. The system follows a champion-led command model - named for my evening/night operational hours:
 
 - **Cynthia** handles intent classification, coordination, spawning, and quality gates.
 - **Specialist agents** execute focused responsibilities with self-validation.
