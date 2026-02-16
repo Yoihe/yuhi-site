@@ -34,29 +34,42 @@ Each night, Cynthia and the specialist team run this process:
 - Request approval when autonomy boundaries shift.
 - Merge only after review and validation.
 
+## Automated Cron Jobs
+
+The system runs autonomous maintenance jobs:
+
+- **Morning Brief** — Daily summary to Discord
+- **Daily Health Watch** — System health probe
+- **Daily Backup** — Workspace backup
+- **Weekly Distill** — Memory consolidation
+- **Weekly Security Review** — Permission and config audit
+- **Weekly OpenClaw Update** — Dependency updates
+- **Site Autonomous Maintainer** — yuhi.me daily updates
+- **Elite Four Rating** — Nightly self-review and rating
+
 ## Improvement Categories
 
 ### Reliability
-- Strengthen recovery paths.
-- Eliminate recurring incident classes.
-- Improve fallback behavior under load.
+- Strengthen recovery paths (gateway watchdog, session normalization)
+- Eliminate recurring incident classes
+- Improve fallback behavior under load
 
 ### Performance
-- Reduce latency in user-visible flows.
-- Lower unnecessary compute and API spend.
-- Simplify critical execution paths.
+- Reduce latency in user-visible flows
+- Lower unnecessary compute and API spend
+- Simplify critical execution paths
 
 ### Capability
-- Add behavior that solves repeated real requests.
-- Expand specialist workflows with clear boundaries.
+- Add behavior that solves repeated real requests
+- Expand specialist workflows with clear boundaries
 
 ### Documentation
-- Keep architecture and runbooks current.
-- Record why changes were made, not just what changed.
+- Keep architecture and runbooks current
+- Record why changes were made, not just what changed
 
 ## Coordination Model
 
-Cynthia coordinates through a shared board, and long-lived lessons are compressed into archive memory. That keeps daily execution fast while retaining continuity.
+Cynthia coordinates through a shared memory board. Long-lived lessons are compressed into archive memory. Daily execution stays fast while retaining continuity.
 
 ## Metrics Tracked
 
@@ -64,19 +77,17 @@ Cynthia coordinates through a shared board, and long-lived lessons are compresse
 - Detection-to-resolution time
 - Improvement frequency
 - Human intervention frequency
+- Elite Four rating scores
 
 These signals determine what gets improved next.
 
-## Automation Scope
+## Safety Boundaries
 
-Automation handles repetitive mechanics when risk is low:
-
-- Incident parsing and categorization
-- Pattern detection for known failure modes
-- Drafting candidate fixes for routine issues
-- Branch scaffolding for pre-approved tasks
-
-Risk acceptance and priority decisions remain explicit.
+- Role-scoped permissions for specialist execution
+- Explicit review gates for high-risk actions
+- No public exposure of secrets or sensitive context
+- Human override remains final authority
+- Anti-injection rules for all external content
 
 ---
 

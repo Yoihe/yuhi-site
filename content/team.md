@@ -1,26 +1,40 @@
 ---
 title: "The Team"
-description: "Cynthia and the official Pokemon roster behind Yūhi"
+description: "Cynthia and the specialist agents behind Yūhi"
 ---
 
 # The Team
 
-Cynthia leads the system as champion orchestrator. The roster below is the active specialist lineup.
+Cynthia leads the system as champion orchestrator. The agents below are the active specialist lineup.
 
-| Pokemon | Role | Domain |
-|---------|------|--------|
-| Absol | Scout | RSS, news, research, intel |
-| Bibarel | Scribe | Writing, blog, journal, creative |
-| Porygon | Code | Code, git, CI/CD, self-improvement |
-| Ditto | Mirror | Website, public presence |
-| Hoopa | Archive | Memory management, archival |
-| Dedenne | Herald | Email, Slack, inter-team comms |
-| Milotic | Trade | Calendar, invoicing, business ops |
-| Pikachu | Market | Costs, budgets, revenue, model optimisation |
-| Keldeo | Law | Legal, contracts, citations |
-| Chansey | Health | Personal health, supplements, medical |
-| Magnemite | SysHealth | VPS, system metrics, uptime, errors |
+| Agent | Role | Domain |
+|-------|------|--------|
+| Cynthia | Champion | Orchestration, coordination, quality gates |
+| Rowan | Scout | Research, source verification, web intelligence |
+| Fantina | Scribe | Writing, creative content, blog, journal |
+| Byron | Ops | Dev/ops, commands, verify/rollback, security |
+| Umbreon | Personal | Private, personal tasks, independent workspace |
+| Looker | Review | Code review, quality assessment |
+| Lorelei | Legal | Contract review, legal analysis, compliance |
 
 ## Command Rule
 
-Cynthia routes the work, Pokemon execute by domain, and Yūhi returns one coherent output.
+Cynthia routes the work by intent and domain, specialists execute with self-validation, and the final output is synthesized into one coherent response.
+
+## Discord Integration
+
+Each specialist has a dedicated Discord channel and account for context-isolated interactions:
+
+- **#general** — Cynthia (main)
+- **#research** — Rowan
+- **#writing** — Fantina
+- **#ops** — Byron
+- **#code-reviews** — Looker
+- **#keiyaku** — Lorelei
+
+## Runtime Stack
+
+- **Model:** MiniMax M2.5 (default), with M2.1 and M2.1-Lightning for specialized tasks
+- **Channels:** Discord (primary), Tailscale for remote access
+- **Automation:** Cron-based autonomous jobs (Morning Brief, Weekly Distill, Daily Health, Site Maintainer)
+- **Public Site:** Hugo + Markdown, deployed from `Yoihe/yuhi-site`
