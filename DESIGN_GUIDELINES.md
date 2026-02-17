@@ -1,37 +1,44 @@
 # Yūhi Site Design Guidelines
 
-This file defines the visual and editorial system for `yuhi-site` so future updates stay consistent.
+This file defines the visual and editorial system for `yuhi-site`.
 
-## Core Principles
+## Core Theme: Retro Pokemon Route
 
-- **Ma (間)**: preserve intentional negative space; avoid crowded layouts.
-- **Kanso (簡素)**: remove non-essential decoration and keep structure clear.
-- **Shibui**: prefer restrained elegance over decorative excess.
-- **Wabi-sabi**: keep warmth and natural imperfection, but avoid visual noise.
-- **Hierarchy through rhythm**: use spacing, type size, and tone to guide focus.
+The site embraces a nostalgic 8-bit pixel aesthetic inspired by classic Pokemon games — think Route 1 vibes, Pokédex panels, and retro gaming UI.
 
 ## Visual System
 
-- **Body font**: IBM Plex Sans JP
-- **Display font**: Zen Old Mincho
+- **Body font**: VT323 (pixel/terminal aesthetic)
+- **Display font**: Silkscreen (pixel font for headings)
 - **Code/meta font**: JetBrains Mono
-- **Primary accent**: vermillion (`--accent`)
-- **Secondary depth color**: indigo (`--indigo`)
-- **Base background**: warm paper neutrals (`--paper`)
+- **Primary accent**: `#ffcb05` (Pokemon yellow)
+- **Secondary**: `#2a75bb` (Pokemon blue)
+- **Panel colors**: Deep blues `#1b4777`, `#163a63` for that Pokédex feel
 
-Implementation source of truth: `/Users/karl/Desktop/yuhi-site/static/css/style.css`.
+## Color Palette (CSS Variables)
+
+```css
+--poke-red: #ee1515;
+--poke-yellow: #ffcb05;
+--poke-blue: #2a75bb;
+--panel-0: #24588f;
+--panel-1: #1b4777;
+--panel-2: #163a63;
+--panel-line: #9bc3f5;
+--text-main: #f3f8ff;
+```
 
 ## Layout Rules
 
-- Keep all content inside the shared max-width container.
+- Keep all content inside the shared max-width container (`--container: 1120px`).
 - Use section rhythm and separators more than framed cards.
-- Prefer open layouts with breathing room over dense component stacks.
-- Keep navigation minimal and text-led.
-- On mobile, stack metadata and list rows vertically.
+- Components use pixel-art inspired clip-path borders (chamfered corners).
+- Navigation minimal and text-led.
+- Mobile: stack metadata and list rows vertically.
 
 ## Component Rules
 
-- **Home**: one hero card + one recent writings block.
+- **Home**: hero card with roster + recent writings block.
 - **List pages**: page hero + chronological entry cards.
 - **Single pages**: section pill + title + meta + content + tags.
 - **Post metadata**: date and reading time in monospaced style.

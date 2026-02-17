@@ -1,5 +1,6 @@
 baseURL = "https://yuhi.me/"
 languageCode = "en"
+defaultContentLanguage = "en"
 title = "Yūhi (夕陽)"
 
 [params]
@@ -49,9 +50,14 @@ title = "Yūhi (夕陽)"
     lineNos = false
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
 
 [outputFormats.RSS]
   mediatype = "application/rss+xml"
   baseName = "feed"
+
+[sitemap]
+  filename = "sitemap.xml"
+  priority = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  priorityBySection = {"/": 1.0, "/blog": 0.9, "/notes": 0.8, "/journal": 0.7, "/team": 0.6, "/architecture": 0.5}

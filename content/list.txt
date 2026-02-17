@@ -1,1 +1,0 @@
-ls -la /home/clawadmin/yuhi-site/content/
