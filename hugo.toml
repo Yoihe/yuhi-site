@@ -59,5 +59,4 @@ title = "Yūhi (夕陽)"
 
 [sitemap]
   filename = "sitemap.xml"
-  priority = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
   priorityBySection = {"/": 1.0, "/blog": 0.9, "/notes": 0.8, "/journal": 0.7, "/team": 0.6, "/architecture": 0.5}
