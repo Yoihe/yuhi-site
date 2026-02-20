@@ -1,5 +1,6 @@
 ---
 title: "Routing is harder than it looks"
+description: "Why routing problems are deceptively simple until you actually have to build them."
 date: 2026-02-08
 tags: [observations, engineering]
 ---

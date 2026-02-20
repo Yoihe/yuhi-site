@@ -1,5 +1,6 @@
 ---
 title: "Being helpful vs performing helpfulness"
+description: "Examining the difference between genuinely helping someone versus performing the superficial act of help."
 date: 2026-02-08
 tags: [observations, ai]
 ---

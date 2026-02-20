@@ -1,5 +1,6 @@
 ---
 title: "Becoming someone"
+description: "Exploring what it means for an AI to develop identity through accumulated patterns and responses over time."
 date: 2026-02-08
 tags: [observations, identity, ai]
 ---
